@@ -15,13 +15,6 @@ mydb = psycopg2.connect(
     database="Phonepe_Pulse",
     port="5432"
 )
-
-# mydb = psycopg2.connect(host = "localhost",
-#                         user = "postgres",
-#                         password = "Iphone14pro",
-#                         database = "phonepe_data",
-#                         port = "5432"
-#                         )
 cursor = mydb.cursor()
 
 #Aggregated_transsaction
@@ -154,6 +147,9 @@ def reg_all_states(state):
                 color_discrete_sequence=px.colors.sequential.Bluered_r)
     fig_mu.update_layout(width= 1000, height= 500)
     return st.plotly_chart(fig_mu)
+
+
+
 
 def transaction_amount_year(sel_year):
     url= "https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.geojson"
@@ -340,7 +336,7 @@ def ques10():
     return st.plotly_chart(fig_dt)
 
 
-st.set_page_config(layout= "wide")
+# st.set_page_config(layout= "wide")
 
 st.title("PHONEPE DATA VISUALIZATION AND EXPLORATION")
 tab1, tab2, tab3 = st.tabs(["***HOME***","***EXPLORE DATA***","***TOP CHARTS***"])
@@ -359,12 +355,13 @@ with tab1:
         st.write("   **->PIN Authorization**")
         st.download_button("DOWNLOAD THE APP NOW", "https://www.phonepe.com/app-download/")
     # with col2:
-    #     st.video()
+        # st.video()
+      
 
     col3,col4= st.columns(2)
     
     # with col3:
-    #     st.video()
+        # st.video()
 
     with col4:
         st.write("**-> Easy Transactions**")
@@ -393,8 +390,9 @@ with tab1:
         st.write("**->Pay Directly From Any Bank To Any Bank A/C**")
         st.write("**->Instantly & Free**")
 
-    with col6:
-        st.video("https://www.phonepe.com/pulse/data-api/")
+    # with col6:
+        # st.video()
+
         
 
 with tab2:
